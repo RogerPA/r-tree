@@ -160,6 +160,7 @@ bool overlaps(const Rectangle<N>& one, const Rectangle<N>& two) {
 
 template <size_t N>
 float get_enlargement(const Rectangle<N>& one, const Rectangle<N>& two) {
+  // TODO(Roger): Improve the enlargement area.
   float total_enlargement = 0.f;
   for (size_t index = 0; index < N; ++index) {
     total_enlargement += get_enlargement(one[index], two[index]);
